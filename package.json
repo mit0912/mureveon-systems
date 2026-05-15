@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "preinstall": "npm config set legacy-peer-deps true",
     "dev:web": "vite",
     "dev:convex": "node node_modules/convex/dist/cli.bundle.cjs dev",
     "build": "vite build && tsc --noEmit"
