@@ -10,4 +10,7 @@ export default defineConfig({
     tsConfigPaths(),
     tanstackStart(),
   ],
+  server: {
+    port: 3000,
+  },
 })

@@ -2,11 +2,11 @@
   "name": "mureveon-systems",
   "private": true,
   "type": "module",
-  "scripts": {
+"scripts": {
   "preinstall": "npm config set legacy-peer-deps true",
   "dev:web": "vite",
   "dev:convex": "node node_modules/convex/dist/cli.bundle.cjs dev",
-  "build": "npx tsr generate && vite build"
+  "build": "vite build"
 },
   "dependencies": {
     "@convex-dev/react-query": "^0.1.0",
