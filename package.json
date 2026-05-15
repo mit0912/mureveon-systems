@@ -3,9 +3,10 @@
   "private": true,
   "type": "module",
 "scripts": {
+  "preinstall": "npm config set legacy-peer-deps true",
   "dev:web": "vite",
   "dev:convex": "node node_modules/convex/dist/cli.bundle.cjs dev",
-  "build": "vite build"
+  "build": "npx @tanstack/router-cli generate && vite build"
 },
   "dependencies": {
     "@convex-dev/react-query": "^0.1.0",
