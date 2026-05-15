@@ -55,13 +55,12 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
 }
-export interface FileRoutesById {
-  __root__: typeof rootRouteImport
+interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/case-studies': typeof CaseStudiesRoute
-  '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/contact': typeof ContactRoute
+  '/case-studies': typeof CaseStudiesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath

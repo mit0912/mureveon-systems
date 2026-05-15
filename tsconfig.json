@@ -1,6 +1,7 @@
 {
-  "include": ["src/**/*.ts", "src/**/*.tsx", "convex/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/routeTree.gen.ts", "convex/**/*.ts"],
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
     "target": "ES2022",
     "jsx": "react-jsx",
     "module": "ESNext",
