@@ -11,7 +11,7 @@ import {
 
 export const Route = createFileRoute('/services')({
   component: ServicesPage,
-});
+})
 
 function ServicesPage() {
   return (

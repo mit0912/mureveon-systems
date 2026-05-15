@@ -10,9 +10,12 @@ import {
   FiCheckCircle
 } from "react-icons/fi";
 
-export const Route = createFileRoute("/about")({
+
+
+export const Route = createFileRoute('/about')({
   component: AboutPage,
-});
+})
+
 
 function AboutPage() {
   return (

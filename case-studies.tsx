@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FiArrowRight, FiCheckCircle, FiPieChart, FiCpu, FiLayout } from "react-icons/fi";
 
-export const Route = createFileRoute("/case-studies")({
+export const Route = createFileRoute('/case-studies')({
   component: CaseStudiesPage,
-});
+})
 
 function CaseStudiesPage() {
   return (

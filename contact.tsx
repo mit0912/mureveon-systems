@@ -10,9 +10,9 @@ import {
   FiCheckCircle 
 } from "react-icons/fi";
 
-export const Route = createFileRoute("/contact")({
+export const Route = createFileRoute('/contact')({
   component: ContactPage,
-});
+})
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
