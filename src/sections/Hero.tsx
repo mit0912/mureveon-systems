@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+// import { Link } from "@tanstack/react-router";
+
+import { Link } from "react-router-dom";
 import { FiArrowRight, FiCheckCircle, FiPlay } from "react-icons/fi";
 
 export function Hero() {
@@ -17,19 +19,19 @@ export function Hero() {
           <p className="text-lg text-primary/70 mb-10 max-w-xl leading-relaxed">
             Mureveon Systems helps startups and enterprises streamline operations, automate repetitive workflows, and launch scalable SaaS products using modern technologies and AI-powered systems.
           </p>
-          
-          <div className="flex flex-wrap gap-4 mb-12">
-            <Link to="/contact">
-              <button className="px-8 py-4 bg-primary text-white rounded-full font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all shadow-lg active:scale-95">
-                Book Free Consultation <FiArrowRight size={20} />
-              </button>
-            </Link>
-            <Link to="/services">
-              <button className="px-8 py-4 border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all">
-                Explore Services
-              </button>
-            </Link>
-          </div>
+      
+      <div className="flex flex-wrap gap-4 mb-12">
+  <Link to="/contact">
+    <button className="px-8 py-4 bg-primary text-white rounded-full font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all shadow-lg active:scale-95">
+      Book Free Consultation <FiArrowRight size={20} />
+    </button>
+  </Link>
+  <Link to="/contact"> {/* Changed from /services to /contact */}
+    <button className="px-8 py-4 border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all">
+      Explore Services
+    </button>
+  </Link>
+</div>
 
           <div className="grid grid-cols-2 gap-4 border-t border-primary/5 pt-8">
             {[

@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { cn } from "../../utils/cn";
@@ -39,14 +39,18 @@ export function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <Link
+            <NavLink
               key={link.name}
-              to={link.href as any}
-              className="text-sm font-medium text-primary/80 hover:text-primary transition-colors"
-              activeProps={{ className: "text-primary font-semibold" }}
+              to={link.href}
+              className={({ isActive }) => 
+                cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  isActive ? "text-primary font-semibold" : "text-primary/80"
+                )
+              }
             >
               {link.name}
-            </Link>
+            </NavLink>
           ))}
           <Link to="/contact">
             <Button size="sm">Get Started</Button>
@@ -67,14 +71,19 @@ export function Navbar() {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t p-6 shadow-xl animate-in slide-in-from-top duration-300">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.name}
-                to={link.href as any}
-                className="text-lg font-medium text-primary/80"
+                to={link.href}
+                className={({ isActive }) => 
+                  cn(
+                    "text-lg font-medium transition-colors",
+                    isActive ? "text-primary font-semibold" : "text-primary/80"
+                  )
+                }
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </Link>
+              </NavLink>
             ))}
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               <Button className="w-full">Get Started</Button>

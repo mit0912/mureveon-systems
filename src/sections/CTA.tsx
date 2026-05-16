@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+// import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 
 export function CTA() {
@@ -11,10 +12,10 @@ export function CTA() {
             Schedule a free consultation to discuss your software, automation, or SaaS development requirements.
           </p>
           <Link to="/contact">
-            <button className="px-10 py-5 bg-white text-primary rounded-full font-bold flex items-center gap-3 mx-auto hover:bg-secondary transition-all">
-              Schedule Consultation <FiArrowRight size={22} />
-            </button>
-          </Link>
+  <button className="px-10 py-5 bg-white text-primary rounded-full font-bold flex items-center gap-3 mx-auto hover:bg-secondary transition-all">
+    Schedule Consultation <FiArrowRight size={22} />
+  </button>
+</Link>
         </div>
       </div>
     </section>

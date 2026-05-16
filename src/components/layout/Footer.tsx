@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+// import { Link } from "@tanstack/react-router";
+
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -34,19 +36,21 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="font-semibold text-lg mb-6">Newsletter</h4>
-          <p className="text-secondary/60 mb-4">Stay updated with the latest in SaaS and Automation.</p>
-          <form className="flex gap-2">
-            <input
-              type="email"
-              placeholder="Email address"
-              className="bg-white/5 border border-white/10 rounded-full px-4 py-2 flex-1 focus:outline-none focus:border-accent"
-            />
-            <button className="bg-accent text-white rounded-full px-6 py-2 font-medium hover:bg-opacity-90 transition-all">
-              Join
-            </button>
-          </form>
-        </div>
+  <h4 className="font-semibold text-lg mb-6">Newsletter</h4>
+  <p className="text-secondary/60 mb-6 text-sm">
+    Stay updated with the latest in SaaS and Automation.
+  </p>
+  <form className="flex flex-col sm:flex-row gap-3">
+    <input
+      type="email"
+      placeholder="Email address"
+      className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex-1 text-sm focus:outline-none focus:border-accent transition-all"
+    />
+    <button className="bg-accent text-white rounded-xl px-6 py-3 font-bold text-sm hover:bg-opacity-90 transition-all whitespace-nowrap shadow-lg active:scale-95">
+      Join
+    </button>
+  </form>
+</div>
       </div>
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-secondary/40 text-sm">
